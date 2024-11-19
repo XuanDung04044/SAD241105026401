@@ -1,4 +1,4 @@
-Phân tích kiên trúc 
+1 Phân tích kiên trúc 
 
 Tính tái sử dụng (Reusability): Tách biệt các thành phần chức năng để dễ dàng mở rộng và bảo trì.
 
@@ -89,7 +89,7 @@ Bảo vệ dữ liệu nhạy cảm và ngăn chặn truy cập trái phép.
 Biểu đồ package
 ![Diagram](https://www.planttext.com/api/plantuml/png/T99DRiCW44RtFiKe-roXYjseaYjBZMgrcyeBGaQK1eC5myAjUh8kUgHUeVb1mYQO7H_VFC4JVp-_6qVCakzLCJ1-P09XjRFeK1CZQJGqR4IxWgy2JkljfOO7OtlNXQr32xKUF7N5Tn49vJ0eoNE0oZkfqJbeZ90yO9wzGWUlJCd3PMOEsp9YK79-cPh17hVLFPIxEc2UzX_8gILZyPfEARKc53Px9QcKr0BQqH7sWLKnVPmd3Gh6nv2vERn5xgsaCI6NdjvF8eE9BeR6oi_uqcWLrkkxMqTJpVb6aIRNMlIJFxyHbg-bWXPQKsFvIgfmePPgMsvDF6vG7yw_-1y00F__0m00)
 
- Cơ chế phân tích
+ 2 Cơ chế phân tích
  
  Cơ chế bảo mật (Security Mechanism) 
  
@@ -195,23 +195,24 @@ Danh sách cơ chế phù hợp:
 
 STT	Cơ chế	Lý do
 
-1	Bảo mật (Security)	Bảo vệ dữ liệu nhạy cảm và phân quyền.
+*	Bảo mật (Security)	Bảo vệ dữ liệu nhạy cảm và phân quyền.
 
-2	Tích hợp hệ thống kế thừa	Sử dụng cơ sở dữ liệu khóa học hiện tại.
+* Tích hợp hệ thống kế thừa	Sử dụng cơ sở dữ liệu khóa học hiện tại.
 
-3	Xử lý đồng thời	Hỗ trợ nhiều người dùng thao tác đồng thời.
+*	Xử lý đồng thời	Hỗ trợ nhiều người dùng thao tác đồng thời.
 
-4	Quản lý trạng thái	Lưu thông tin tạm thời khi thao tác.
+* Quản lý trạng thái	Lưu thông tin tạm thời khi thao tác.
 
-5	Giao dịch (Transaction)	Đảm bảo tính toàn vẹn dữ liệu.
+*	Giao dịch (Transaction)	Đảm bảo tính toàn vẹn dữ liệu.
 
-6	Xử lý lỗi	Cải thiện độ tin cậy và trải nghiệm người dùng.
+*	Xử lý lỗi	Cải thiện độ tin cậy và trải nghiệm người dùng.
 
-7	Hiệu năng	Đáp ứng nhu cầu xử lý nhanh và mượt mà.
+*	Hiệu năng	Đáp ứng nhu cầu xử lý nhanh và mượt mà.
 
-Phân tích ca sử dụng Payment
+3 Phân tích ca sử dụng Payment
 
-1. Xác định các lớp phân tích
+Xác định các lớp phân tích
+
 Dựa trên yêu cầu của ca sử dụng Payment, các lớp phân tích được xác định như sau:
 
 Tên Lớp	Mô tả
@@ -315,6 +316,8 @@ TransactionLog:
 Phương thức:
 
 logTransaction(employee: Employee, status: String): void - Lưu thông tin giao dịch.
+
+4 Phân tích ca sử dụng Maintain Timecard
 
 Xác định các lớp phân tích
 
@@ -430,6 +433,8 @@ PayrollSystem:
 Phương thức:
 
 maintainTimecard(employee: Employee): void - Điều phối quy trình duy trì timecard.
+
+5 Hợp nhất kết quả phân tích
 
 Các lớp phân tích chung
 
