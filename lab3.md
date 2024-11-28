@@ -37,3 +37,41 @@
 
 * Kết nối để lấy dữ liệu báo cáo và phân tích thông tin từ hệ thống quản lý dự án.
 # 2 Analysis class to design element map
+| **Analysis Class**           | **Design Element**                |
+|------------------------------|-----------------------------------|
+| `RegistrationForm`            | `UserRegistrationForm`            |
+| `UpdateProfileForm`           | `EditProfileForm`                 |
+| `DashboardController`         | `DashboardController`             |
+| `NotificationInterface`       | `NotificationService`             |
+| `PaymentProcessingController` | `PaymentServiceController`        |
+| `Invoice`                     | `InvoiceModel`                    |
+| `TransactionController`       | `TransactionHandler`              |
+
+### 1 Lớp biên (Boundary Classes):
+
+* Ví dụ: RegistrationForm trong lớp phân tích ánh xạ thành UserRegistrationForm trong thiết kế để hỗ trợ đăng ký người dùng.
+### 2 Lớp điều khiển (Control Classes):
+
+* Ví dụ: DashboardController từ lớp phân tích giữ nguyên trong thiết kế vì nó quản lý logic xử lý hiển thị bảng điều khiển.
+### 3 Lớp thực thể (Entity Classes):
+
+* Ví dụ: Invoice ánh xạ thành InvoiceModel, đại diện cho dữ liệu hóa đơn trong cơ sở dữ liệu hoặc trong hệ thống.
+# 3 Design element to owning package map
+| **Design Element**           | **"Owning" Package**                          |
+|------------------------------|-----------------------------------------------|
+| `LoginForm`                  | `Middleware::Authentication::UI Framework`    |
+| `MainEmployeeForm`           | `Applications::EmployeeManagement`            |
+| `TimecardForm`               | `Applications::Timekeeping`                   |
+| `MainApplicationForm`        | `Middleware::UI Framework`                    |
+| `TimecardController`         | `Applications::Timekeeping::Controllers`      |
+| `SystemClockInterface`       | `Applications::System::Clock`                 |
+| `PayrollController`          | `Applications::Payroll::Processing`           |
+| `Paycheck`                   | `BusinessServices::Payroll::Artifacts`        |
+
+### 1 Phần tử thiết kế (Design Element): 
+* Đây là các thành phần trong hệ thống của bạn, ví dụ như các form, controller, hay các lớp dữ liệu (như LoginForm, PayrollController, v.v.).
+
+### 2 Gói sở hữu (Owning Package): 
+* Đây là các gói chứa các phần tử thiết kế này, ví dụ như Applications::EmployeeManagement hoặc BusinessServices::Payroll::Artifacts, phản ánh các khu vực hoặc mô-đun trong hệ thống mà phần tử thiết kế thuộc về.
+# 4 Architectural layers and their dependencies
+![Diagram](https://www.planttext.com/api/plantuml/png/L51BRi903Dtx51Pxn3wB2ah4gf6YX1x012jDEvb4OmS9LJqP2ux45N2OL86LvVURvxbThcjH2Zgq3gZIBc0Ukc-kD2DFDGSamJoRg9HFxBe-ehPCSC5z5xJnTNaMvNOaYn8WM0hvsZ4kNZ9RzfgIqe645p4_VSTV-0F8CrmktoAGu3OmAQy--wED_ru23pRAJ3J1M2hf801MwpcZO0sDrSOzoGz-DAApVvGcaOXlcBqedzqxrkfhlW_7shFVj0bkFBcpD7Ooo-2itfhzSVpDEm000F__0m00)
